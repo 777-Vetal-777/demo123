@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/students")
 public class Controller {
-
+    int i = 0;
     @GetMapping
-    public String getStudents(){
-        return "firstStudent";
+    public String getStudents() throws InterruptedException {
+        Thread.sleep(1000);
+        i++;
+        return "firstStudent"+i;
     }
 }
