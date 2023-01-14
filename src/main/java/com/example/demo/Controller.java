@@ -10,7 +10,7 @@ public class Controller {
     int i = 0;
     @GetMapping
     public String getStudents() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         i++;
         return "firstStudent"+i;
     }
