@@ -14,8 +14,7 @@ pipeline{
 
         stage("Deploy"){
         steps{
-        sshPublisher(publishers: [sshPublisherDesc(configName: 'MyWebServerTest', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'java -jar /home/abcd/build/libs/demo-0.0.2-SNAPSHOT.war', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/demo-0.0.2-SNAPSHOT.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
-        }
+sshPublisher(publishers: [sshPublisherDesc(configName: 'MyWebServerTest', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ls', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/demo-0.0.2-SNAPSHOT.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])        }
         }
     }
 }
