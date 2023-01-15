@@ -4,7 +4,7 @@ pipeline{
         stage("Build"){
             steps{
             sh 'pwd'
-            sh 'gradle build'
+            sh 'gradle init'
             sh 'pwd'
             }
         }
