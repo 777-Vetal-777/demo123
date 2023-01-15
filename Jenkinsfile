@@ -5,6 +5,7 @@ pipeline{
             steps{
             sh 'pwd'
             sh 'gradle build'
+            sh 'pwd'
             }
         }
     }
