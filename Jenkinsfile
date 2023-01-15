@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-            sh 'build'
+                sh 'cd /var/lib/jenkins/workspace/javaprojectpipeline'
+            sh 'gradle build'
             }
         }
     }
